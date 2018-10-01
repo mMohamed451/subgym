@@ -1,0 +1,38 @@
+<div class="container">
+  <h5 style="padding-top:20px;">Our Members:</h5>
+
+  <table>
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th><!-- full name (first + last)-->
+            <th>M.Number</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>desiredWeight</th>
+            <th>Class</th>
+            
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let m of member">
+        <tr>
+       <!--   <td>{{m.ID}}</td>
+          <td>{{m.firstName}}</td>
+          <td>{{m.lastName}}</td>
+          <td>{{m.height}}</td>
+          <td>{{m.weight}}</td>
+          <td>{{m.desiredWeight}}</td>
+          <td>{{m.gymclass}}</td>
+          -->
+          <td>{{m.ID}}</td>
+          <td>{{m.firstName}} {{m.lastName}}</td>
+          <td>{{m.mobile}}</td>
+          <td>{{m.height}}</td>
+          <td>{{m.weight}}</td>
+          <td>{{m.desiredWeight}}</td>
+          <td>{{m.gymclass}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

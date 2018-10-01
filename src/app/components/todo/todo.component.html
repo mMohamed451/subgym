@@ -1,0 +1,23 @@
+<div class="container">
+  <form (submit)="onSubmit()">
+    <div class="input-field col s12">
+      <textarea id="TodoText" class="materialize-textarea" [(ngModel)]="todo.TodoText" name="TodoText"></textarea>
+      <label>Schedule a Task !</label>
+    </div>
+    <button class="btn waves-effect waves-light" style="background:cornflowerblue;" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+
+  <table >
+    <tr>
+      <th>Todo ID</th>
+      <th>Todo Text</th>
+    </tr>
+    <tr *ngFor="let t of todos">
+      <td>{{t.TodoID}}</td>
+      <td>{{t.TodoText}}</td>
+      <button><i class="material-icons right" (click)="onRemove(t.TodoID)">delete</i>Delete </button>
+    </tr>
+  </table>
+</div>

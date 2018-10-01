@@ -1,0 +1,36 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="wrapper">
+  <aside class="main_sidebar">
+    <ul id="myDIV">
+      <li routerLink="" class="btn22"><i id="welcome"  class="fa fa-arrows"></i>Home</li>
+      <li routerLink="membersRegister" class="btn22"><i class="fa fa-battery-2"></i>Add Member</li>
+      <li routerLink="members" class="btn22"><i class="fa fa-bell"></i>Find member</li>
+      <li routerLink="freeinvite" class="btn22"><i class="fa fa-bicycle"></i>Free Invites</li>
+      <li routerLink="todos" class="btn22"><i class="fa fa-circle"></i>Schedule Tasks</li>
+      <li routerLink="supplements" class="btn22"><i class="fa fa-crosshairs"></i>supplements</li>
+      <li routerLink="reports" class="btn22"><i class="fa fa-deaf"></i>Reports</li>
+
+    </ul>
+  </aside>
+</div>
+
+
+<script>
+
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn22");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>

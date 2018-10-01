@@ -1,0 +1,70 @@
+<div class="container">
+
+  <form (submit)="onSubmit()"> 
+  <div class="row">
+    <div class="input-field col s3">
+      <input  id="MemberID" type="text" class="validate" [(ngModel)]="invite.MemberID" name="MemberID">
+      <label for="M.ID">Member ID</label>
+    </div>
+    
+    <div class="input-field col s4">
+      <input  id="GuestName" type="text" class="validate" [(ngModel)]="invite.GuestName" name="GuestName" >
+      <label for="Guest.Name">Guest.Name</label>
+    </div>
+
+    <div class="input-field col s4">
+      <input  id="GuestMNumber" type="text" class="validate" [(ngModel)]="invite.GuestMNumber" name="GuestMNumber" >
+      <label for="Guest.Number">Guest.Number</label>
+    </div>
+
+  </div>
+
+  <h5>After:watching Feedback:</h5>
+
+<div class="row">
+  <div class="input-field col s4">
+    <input id="GuestFeedback" type="text" class="validate" [(ngModel)]="invite.GuestFeedback" name="GuestFeedback" >
+    <label for="Guest.Feedback">Guest.Feedback</label>
+  </div>
+
+<!--
+  <div class="input-field col s4">
+    <input placeholder="Guest startDate" id="Guest.startDate" type="text" class="validate" [(ngModel)]="member.firstName" name="firstName" #firstName="ngModel">
+    <label for="Guest.startDate">Guest.StartDate</label>
+  </div>
+  -->
+</div>
+
+
+
+
+  <button class="btn waves-effect waves-light" style="background:cornflowerblue;" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</form>
+  <br><hr><br>
+  <h5>Invite History:</h5>
+  <table>
+    <thead>
+      <tr>
+          <th>Invited P.ID</th>
+          <th>Guest Name</th>
+          <th>Guest Number</th>
+          <th>Guest Feedback</th>
+          
+          
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let m of invites">
+      <tr>
+    
+        <td>{{m.MemberID}}</td>
+        <td>{{m.GuestName}}</td>
+        <td>{{m.GuestMNumber}}</td>
+        <td>{{m.GuestFeedback}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

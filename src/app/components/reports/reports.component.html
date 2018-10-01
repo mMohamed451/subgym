@@ -1,0 +1,68 @@
+<div class="container">
+
+
+  <div class="row">
+      <h4>It's Great to Hear your thoughts about Sub Gym: </h4>
+  </div>
+<form (submit)="onSubmit()">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" [(ngModel)]="report.ReportTxt" name="ReportTxt"></textarea>
+          <label for="textarea1">Type Your Report</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" [(ngModel)]="report.Suggest" name="Suggest"></textarea>
+          <label for="textarea1">Tell Us Your Suggests</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+ <!-- <div class="row">
+      <select class="browser-default" style="background-color:rgb(237, 244, 245);">
+          <option value="" disabled selected>Suggest / Report</option>
+          <option value="Suggest">Suggest</option>
+          <option value="Report">Report</option>
+        </select>
+  </div>
+-->
+  <button class="btn waves-effect waves-light" style="background:cornflowerblue;" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+    <br><hr><br>
+    <h5>Reports History:</h5>
+    <table>
+      <thead>
+        <tr>
+            <th>Report ID</th>
+            <th>Report</th>
+            <th>Suggest</th>
+          
+            
+            
+        </tr>
+      </thead>
+  
+      <tbody *ngFor="let m of reports">
+        <tr>
+      
+          <td>{{m.ReportID}}</td>
+          <td>{{m.ReportTxt}}</td>
+          <td>{{m.Suggest}}</td>
+      
+        </tr>
+      </tbody>
+    </table>
+</div>

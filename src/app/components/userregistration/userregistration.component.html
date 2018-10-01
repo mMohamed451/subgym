@@ -1,0 +1,121 @@
+<!-- Navbar goes here -->
+
+<!-- Page Layout here -->
+
+<div class="container">
+
+  <div class="row">
+    <form id="gForm" name="form" class="col s12" (submit)="onSubmit()" >
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input  id="firstName" type="text" class="validate" [(ngModel)]="member.firstName" name="firstName" >
+          <label for="firstName">First Name</label>
+        </div>
+
+        <div class="input-field col s4">
+          <input  id="lastName" type="text" class="validate" [(ngModel)]="member.lastName" name="lastName">
+          <label for="lastName">Last Name</label>
+        </div>
+
+        <div class="input-field col s2">
+          <input  id="age" type="number" class="validate" [(ngModel)]="member.age" name="age" >
+          <label for="age">Age (in years)</label>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="input-field col s5">
+          <input id="email" type="email" class="validate" [(ngModel)]="member.email" name="email" >
+          <label for="email">Email (ex.@email.com)</label>
+        </div>
+
+        <div class="input-field col s5">
+          <input id="mobile" type="text" class="validate" [(ngModel)]="member.mobile" name="mobile" >
+          <label for="mobile">Mobile (ex.0111111111)</label>
+        </div>
+
+
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+
+          <select id="gender" class="browser-default" [(ngModel)]="member.gender" name="gender" style="background-color:rgb(237, 244, 245);" >
+            <option value="" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+        </div>
+
+        <div class="input-field col s3">
+
+          <select id="gymclass" class="browser-default" style="background-color:rgb(237, 244, 245);" [(ngModel)]="member.gymclass" name="gymclass" >
+            <option value="" disabled selected>Class</option>
+            <option value="fitness">Fitness</option>
+            <option value="bodyBuilding">Body Building</option>
+          </select>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="address" type="text" class="validate" [(ngModel)]="member.address" name="address" >
+          <label for="address">Address</label>
+        </div>
+
+        <div class="input-field col s3">
+          <input  id="city" type="text" class="validate" [(ngModel)]="member.city" name="city">
+          <label for="city">City</label>
+        </div>
+
+
+        <div class="input-field col s3">
+          <input  id="state" type="text" class="validate" [(ngModel)]="member.state" name="state" >
+          <label for="state">State</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s3">
+          <input  id="weight" type="text" class="validate" [(ngModel)]="member.weight" name="weight" >
+          <label for="weight">Weight (in Kgs)</label>
+        </div>
+
+        <div class="input-field col s3">
+          <input  id="height" type="text" class="validate" [(ngModel)]="member.height" name="height" >
+          <label for="height">Height (in m)</label>
+        </div>
+
+
+        <div class="input-field col s3">
+          <input  id="desiredWeight" type="text" class="validate" [(ngModel)]="member.desiredWeight" name="desiredWeight">
+          <label for="desiredWeight">Desire Weight (in Kgs)</label>
+        </div>
+
+
+      </div>
+      <div class="row">
+
+        <div class="input-field col s12">
+          <textarea id="whyToJoinSubGym" class="materialize-textarea" [(ngModel)]="member.whyToJoinSubGym" name="whyToJoinSubGym"></textarea>
+          <label>Why do you want to Join SubGym</label>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button class="btn waves-effect waves-light" style="background:cornflowerblue;" type="submit"  name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+
+
+
+    </form>
+  </div>
+
+
+
+
+
+</div>
